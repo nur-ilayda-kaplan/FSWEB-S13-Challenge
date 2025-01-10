@@ -1,7 +1,7 @@
 import org.example.Company;
 import org.example.Employee;
 import org.example.Healthplan;
-import org.example.enums.Plan;
+import org.example.enums.plan;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,7 +23,7 @@ public class CompanyTest {
 
     @BeforeEach
     void setUp() {
-        healthplan = new Healthplan(1, "A Sigorta", Plan.BASIC);
+        healthplan = new Healthplan(1, "A Sigorta", plan.BASIC);
         String[] healthplans = new String[2];
         healthplans[0] = healthplan.getName();
         employee = new Employee(1, "John Doe", "jd@test.com", "1234", healthplans);
@@ -51,7 +51,7 @@ public class CompanyTest {
     public void testHealthPlanInstanceTypes() throws NoSuchFieldException {
         assertThat(healthplan.getId(), instanceOf(Integer.class));
         assertThat(healthplan.getName(), instanceOf(String.class));
-        assertThat(healthplan.getPlan(), instanceOf(Plan.class));
+        assertThat(healthplan.getPlan(), instanceOf(plan.class));
     }
 
     @DisplayName("Plan sınıf değişkenleri doğru tipte mi ?")
